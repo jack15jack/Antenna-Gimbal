@@ -41,13 +41,13 @@ void loop() {
    switch (current_state) {
        case STOW:
          handleStowState();
-         Serial.println("Stow");
+         //Serial.println("Stow");
          //Serial.println(gnss_fix);
          break;
 
        case MONOSTATIC:
          handleMonostaticState();
-         Serial.println("Mono");
+         //Serial.println("Mono");
          break;
 
        case BISTATIC:
@@ -63,4 +63,5 @@ void loop() {
 
   // Serial.println(digitalRead(relay_pin_in1));
 }
+
 
