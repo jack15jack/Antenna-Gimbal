@@ -37,13 +37,13 @@ void handleBistaticState() {
   Serial.println(TARGET_LON, 2);
   
   pitch_input = (90 - target_pitch + roll_A);
-  roll_input = pitch_A - target_roll;
+  roll_input = pitch_A - target_pitch;
 
   //int pitch_cmd = 90 - pitch_input;
-  int roll_err = target_pitch + (roll_A - 90);
+  int roll_err = target_roll + (roll_A - 90);
  // int pitch_cmd =   - target_pitch - roll_err;//- roll_A;
   int pitch_cmd =    90- roll_err;//- roll_A;
-  int roll_cmd  = 90 - roll_input;
+  int roll_cmd  =  15 + roll_input;
  
 if (millis() - lastUpdateTime >= MOVE_INTERVAL_MS) {
 lastUpdateTime = millis();
